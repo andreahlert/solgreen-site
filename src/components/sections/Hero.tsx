@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { NumberTicker } from "../ui/number-ticker";
 import { ShimmerButton } from "../ui/shimmer-button";
 import { Particles } from "../ui/particles";
+import { url } from "../../lib/base";
 
 export function Hero() {
   const [mounted, setMounted] = useState(false);
@@ -41,10 +42,10 @@ export function Hero() {
           </p>
 
           <div className="flex flex-wrap items-center gap-3" style={fade(300)}>
-            <ShimmerButton href="/solucoes">
+            <ShimmerButton href={url("/solucoes")}>
               Conheça nossas soluções
             </ShimmerButton>
-            <a href="/simulador" className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors">
+            <a href={url("/simulador")} className="inline-flex items-center gap-2 px-5 py-2.5 text-sm font-medium text-neutral-500 hover:text-neutral-900 transition-colors">
               Calcule seu risco energético
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />

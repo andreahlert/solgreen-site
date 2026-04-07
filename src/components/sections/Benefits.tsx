@@ -1,5 +1,6 @@
 import { BlurFade } from "../ui/blur-fade";
 import { sectors } from "../../lib/data";
+import { url } from "../../lib/base";
 
 export function Benefits() {
   return (
@@ -23,7 +24,7 @@ export function Benefits() {
           {sectors.slice(0, 5).map((s, i) => (
             <BlurFade key={s.slug} delay={i * 0.08}>
               <a
-                href={`/setores/${s.slug}`}
+                href={url(`/setores/${s.slug}`)}
                 className="group block bg-white rounded-xl border border-neutral-200 p-6 h-full hover:border-green/30 hover:shadow-sm transition-all duration-300"
               >
                 <div className="w-10 h-10 rounded-lg bg-green/10 flex items-center justify-center mb-4">
@@ -55,7 +56,7 @@ export function Benefits() {
 
           <BlurFade delay={0.4}>
             <a
-              href="/setores"
+              href={url("/setores")}
               className="group flex flex-col items-center justify-center bg-white rounded-xl border border-dashed border-neutral-300 p-6 h-full hover:border-green/50 transition-all duration-300"
             >
               <div className="w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center mb-3 group-hover:bg-green/10 transition-colors">

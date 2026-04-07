@@ -1,6 +1,7 @@
 import { BlurFade } from "../ui/blur-fade";
 import { MagicCard } from "../ui/magic-card";
 import { pillars } from "../../lib/data";
+import { url } from "../../lib/base";
 
 export function About() {
   return (
@@ -23,7 +24,7 @@ export function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {pillars.map((p, i) => (
             <BlurFade key={p.slug} delay={i * 0.1}>
-              <a href={`/solucoes/${p.slug}`} className="block h-full">
+              <a href={url(`/solucoes/${p.slug}`)} className="block h-full">
                 <MagicCard className="p-8 h-full group hover:border-green/30 transition-colors duration-300">
                   <div className="w-12 h-12 rounded-xl bg-green/10 flex items-center justify-center mb-6">
                     <svg className="w-6 h-6 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { url } from "../../lib/base";
 
 const businessTypes = [
   {
@@ -190,7 +191,7 @@ export function RiskSimulator() {
               </div>
 
               <a
-                href="/contato"
+                href={url("/contato")}
                 className="block w-full text-center py-3 rounded-lg bg-green text-white text-sm font-medium hover:bg-green-dark transition-colors"
               >
                 Falar com engenheiro sobre esta solução

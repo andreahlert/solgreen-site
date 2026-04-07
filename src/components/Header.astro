@@ -1,13 +1,14 @@
 ---
 import { navLinks } from "../lib/data";
 const currentPath = Astro.url.pathname;
+const base = import.meta.env.BASE_URL;
 ---
 
 <header class="fixed top-0 left-0 right-0 z-50" id="main-header">
   <nav class="bg-white/80 backdrop-blur-xl border-b border-neutral-200/60 transition-all duration-300" id="nav-bar">
     <div class="max-w-6xl mx-auto px-6 flex items-center justify-between h-16">
-      <a href="/" class="flex items-center gap-2">
-        <img src="/img/logo-solgreen-energia.svg" alt="SolGreen Energia" class="h-8" />
+      <a href={base} class="flex items-center gap-2">
+        <img src={`${base}img/logo-solgreen-energia.svg`} alt="SolGreen Energia" class="h-8" />
       </a>
 
       <!-- Desktop -->
@@ -15,7 +16,7 @@ const currentPath = Astro.url.pathname;
         {navLinks.map((link) => (
           <li>
             <a
-              href={link.href}
+              href={`${base}${link.href.slice(1)}`}
               class:list={[
                 "px-4 py-2 rounded-lg text-[13px] font-medium transition-all duration-200",
                 currentPath === link.href || (link.href !== "/" && currentPath.startsWith(link.href))
@@ -30,7 +31,7 @@ const currentPath = Astro.url.pathname;
       </ul>
 
       <a
-        href="/contato"
+        href={`${base}contato`}
         class="hidden md:inline-flex items-center px-4 py-2 rounded-lg bg-neutral-900 text-white text-[13px] font-medium hover:bg-neutral-800 transition-colors"
       >
         Fale conosco
@@ -52,7 +53,7 @@ const currentPath = Astro.url.pathname;
       <div class="max-w-6xl mx-auto px-6 py-3 flex flex-col gap-1">
         {navLinks.map((link) => (
           <a
-            href={link.href}
+            href={`${base}${link.href.slice(1)}`}
             class:list={[
               "px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
               currentPath === link.href || (link.href !== "/" && currentPath.startsWith(link.href))

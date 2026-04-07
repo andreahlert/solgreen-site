@@ -12,6 +12,7 @@ export function getStaticPaths() {
 
 const { pillar } = Astro.props;
 const otherPillars = pillars.filter((p) => p.slug !== pillar.slug);
+const base = import.meta.env.BASE_URL;
 
 const contentMap: Record<string, { intro: string; details: string[]; benefits: string[] }> = {
   "usinas-solares": {
@@ -70,7 +71,7 @@ const isUsina = pillar.slug === "usinas-solares";
 
 <Layout title={pillar.title} description={pillar.description}>
   <section class="relative h-56 md:h-72 overflow-hidden">
-    <img src={pillar.cover} alt={pillar.title} class="absolute inset-0 w-full h-full object-cover" />
+    <img src={`${base}${pillar.cover.slice(1)}`} alt={pillar.title} class="absolute inset-0 w-full h-full object-cover" />
     <div class="absolute inset-0 bg-neutral-900/70" />
     <div class="relative max-w-6xl mx-auto px-6 h-full flex items-end pb-10">
       <div>
@@ -121,12 +122,12 @@ const isUsina = pillar.slug === "usinas-solares";
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {otherPillars.map((p) => (
             <a
-              href={`/solucoes/${p.slug}`}
+              href={`${base}solucoes/${p.slug}`}
               class="group flex items-center gap-4 p-4 rounded-xl border border-neutral-200 hover:border-neutral-300 hover:shadow-sm transition-all"
             >
               <div class="w-10 h-10 rounded-lg bg-green/10 flex items-center justify-center shrink-0">
                 <svg class="w-5 h-5 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={p.icon} />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d={p.icon as string} />
                 </svg>
               </div>
               <div>
