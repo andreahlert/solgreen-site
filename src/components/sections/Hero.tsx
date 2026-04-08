@@ -37,8 +37,9 @@ export function Hero() {
           </h1>
 
           <p className="text-base md:text-lg text-neutral-500 max-w-lg leading-relaxed mb-10" style={fade(200)}>
-            Da usina de 5 MWp ao galpão automatizado. Geramos, armazenamos
-            e controlamos energia para que sua operação nunca pare.
+            17 anos de engenharia elétrica pesada. Mais de 7 MWp em usinas
+            entregues. Agora aplicamos essa experiência em armazenamento
+            por bateria e automação para quem depende de energia 24h.
           </p>
 
           <div className="flex flex-wrap items-center gap-3" style={fade(300)}>

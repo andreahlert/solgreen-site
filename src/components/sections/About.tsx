@@ -13,10 +13,10 @@ export function About() {
               O que fazemos
             </p>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-900 leading-tight">
-              Geramos, armazenamos e controlamos energia
+              Três frentes, um objetivo
             </h2>
             <p className="text-neutral-400 mt-4 max-w-xl mx-auto">
-              Três pilares de tecnologia para que sua operação tenha a energia certa, na hora certa, sem falhas.
+              Cada operação tem um gargalo diferente. Identificamos o seu e projetamos o sistema que resolve.
             </p>
           </div>
         </BlurFade>
@@ -26,7 +26,6 @@ export function About() {
             <BlurFade key={p.slug} delay={i * 0.1}>
               <a href={url(`/solucoes/${p.slug}`)} className="block h-full">
                 <MagicCard className="overflow-hidden h-full group hover:border-green/30 transition-colors duration-300">
-                  {/* Foto vívida no topo do card */}
                   <div className="h-44 overflow-hidden">
                     <img
                       src={url(p.image)}

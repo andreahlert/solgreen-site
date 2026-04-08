@@ -12,10 +12,10 @@ export function Benefits() {
               Setores
             </p>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-900">
-              Soluções por segmento
+              Quem atendemos
             </h2>
             <p className="text-neutral-400 mt-4 max-w-xl mx-auto">
-              Cada operação tem uma dor diferente. Entendemos a sua e dimensionamos a solução certa.
+              Avicultura, agro, indústria alimentícia, geradoras de energia e comércio. Conheça os setores onde atuamos.
             </p>
           </div>
         </BlurFade>
@@ -27,7 +27,6 @@ export function Benefits() {
                 href={url(`/setores/${s.slug}`)}
                 className="group block bg-white rounded-xl border border-neutral-200 overflow-hidden h-full hover:border-green/30 hover:shadow-md transition-all duration-300"
               >
-                {/* Foto vívida no topo */}
                 <div className="h-36 overflow-hidden">
                   <img
                     src={url(s.cover)}

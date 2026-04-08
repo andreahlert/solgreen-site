@@ -14,19 +14,16 @@ export function SolutionsGrid() {
               Credenciais
             </p>
             <h2 className="text-3xl md:text-4xl font-heading font-bold text-neutral-900">
-              A engenharia que atende as maiores do Brasil
+              Quem confia na nossa engenharia
             </h2>
             <p className="text-lg text-neutral-400 mt-4 max-w-2xl mx-auto">
-              <TextReveal text="A mesma equipe que projeta subestações para Bunge e Kepler Weber dimensiona sistemas de energia para sua operação." />
+              <TextReveal text="Projetamos subestações para Bunge e Kepler Weber. Construímos usinas de 5 MWp para a CRELUZ. Essa é a engenharia por trás de cada sistema que entregamos." />
             </p>
           </div>
         </BlurFade>
 
         <BlurFade delay={0.15}>
           <div className="rounded-xl border border-neutral-200 bg-neutral-50 py-10 overflow-hidden">
-            <p className="text-xs font-semibold text-neutral-400 uppercase tracking-widest mb-8 text-center">
-              Empresas que confiam na nossa engenharia
-            </p>
             <Marquee duration={25} pauseOnHover className="[--gap:3rem]">
               {credentialClients.map((client) => (
                 <div
