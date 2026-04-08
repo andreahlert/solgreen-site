@@ -25,31 +25,31 @@ export function Benefits() {
             <BlurFade key={s.slug} delay={i * 0.08}>
               <a
                 href={url(`/setores/${s.slug}`)}
-                className="group block bg-white rounded-xl border border-neutral-200 p-6 h-full hover:border-green/30 hover:shadow-sm transition-all duration-300"
+                className="group block bg-white rounded-xl border border-neutral-200 overflow-hidden h-full hover:border-green/30 hover:shadow-md transition-all duration-300"
               >
-                <div className="w-10 h-10 rounded-lg bg-green/10 flex items-center justify-center mb-4">
-                  <svg className="w-5 h-5 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={s.icon} />
-                  </svg>
+                {/* Foto vívida no topo */}
+                <div className="h-36 overflow-hidden">
+                  <img
+                    src={url(s.cover)}
+                    alt={s.title}
+                    className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                  />
                 </div>
-                <h3 className="font-heading font-semibold text-neutral-900 text-sm mb-1.5 group-hover:text-green transition-colors">
-                  {s.title}
-                </h3>
-                <p className="text-xs text-red-500/80 font-medium mb-2">{s.pain}</p>
-                <p className="text-sm text-neutral-400 leading-relaxed mb-3">
-                  {s.description}
-                </p>
-                {s.stats.investment && (
-                  <p className="text-xs text-neutral-500">
-                    Investimento a partir de <span className="font-semibold text-neutral-700">{s.stats.investment}</span>
+                <div className="p-5">
+                  <h3 className="font-heading font-semibold text-neutral-900 text-sm mb-1.5 group-hover:text-green transition-colors">
+                    {s.title}
+                  </h3>
+                  <p className="text-xs text-red-500/80 font-medium mb-2">{s.pain}</p>
+                  <p className="text-xs text-neutral-400 leading-relaxed mb-3">
+                    {s.description.slice(0, 100)}...
                   </p>
-                )}
-                <span className="inline-flex items-center gap-1.5 mt-4 text-xs font-medium text-neutral-400 group-hover:text-green transition-colors">
-                  Ver soluções para este setor
-                  <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-medium text-neutral-400 group-hover:text-green transition-colors">
+                    Ver soluções
+                    <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </div>
               </a>
             </BlurFade>
           ))}
@@ -57,9 +57,9 @@ export function Benefits() {
           <BlurFade delay={0.4}>
             <a
               href={url("/setores")}
-              className="group flex flex-col items-center justify-center bg-white rounded-xl border border-dashed border-neutral-300 p-6 h-full hover:border-green/50 transition-all duration-300"
+              className="group flex flex-col items-center justify-center bg-white rounded-xl border border-dashed border-neutral-300 p-6 h-full min-h-[280px] hover:border-green/50 transition-all duration-300"
             >
-              <div className="w-10 h-10 rounded-lg bg-neutral-100 flex items-center justify-center mb-3 group-hover:bg-green/10 transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-neutral-100 flex items-center justify-center mb-3 group-hover:bg-green/10 transition-colors">
                 <svg className="w-5 h-5 text-neutral-400 group-hover:text-green transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>

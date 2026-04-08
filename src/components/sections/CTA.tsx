@@ -7,12 +7,20 @@ export function CTA() {
     <section className="py-24">
       <div className="max-w-6xl mx-auto px-6">
         <BlurFade>
+          {/* Gradient fade lateral: foto vívida na direita, dissolve para escuro na esquerda */}
           <div className="relative rounded-2xl overflow-hidden">
-            <div className="absolute inset-0 bg-neutral-900" />
-            <img src={url("/img/cta-bg.png")} alt="" className="absolute inset-0 w-full h-full object-cover opacity-20" />
             <BorderBeam size={300} duration={15} colorFrom="#22c55e" colorTo="#1933c5" />
-            <div className="relative p-12 md:p-16">
-              <div className="max-w-lg">
+            <div className="relative min-h-[380px] md:min-h-[340px]">
+              {/* Foto vívida, sem overlay */}
+              <img
+                src={url("/img/cta-bg.png")}
+                alt="Instalação de usina solar"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              {/* Gradiente lateral: escuro na esquerda, transparente na direita */}
+              <div className="absolute inset-0 bg-gradient-to-r from-neutral-900 via-neutral-900/95 via-50% to-transparent" />
+
+              <div className="relative p-10 md:p-14 flex flex-col justify-center h-full max-w-lg">
                 <h2 className="text-2xl md:text-3xl font-heading font-bold text-white leading-tight mb-4">
                   Sua operação não pode parar.
                   <br />

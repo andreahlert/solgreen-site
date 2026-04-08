@@ -25,37 +25,42 @@ export function About() {
           {pillars.map((p, i) => (
             <BlurFade key={p.slug} delay={i * 0.1}>
               <a href={url(`/solucoes/${p.slug}`)} className="block h-full">
-                <MagicCard className="p-8 h-full group hover:border-green/30 transition-colors duration-300">
-                  <div className="w-12 h-12 rounded-xl bg-green/10 flex items-center justify-center mb-6">
-                    <svg className="w-6 h-6 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d={p.icon} />
-                    </svg>
+                <MagicCard className="overflow-hidden h-full group hover:border-green/30 transition-colors duration-300">
+                  {/* Foto vívida no topo do card */}
+                  <div className="h-44 overflow-hidden">
+                    <img
+                      src={url(p.image)}
+                      alt={p.title}
+                      className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
+                    />
                   </div>
 
-                  <h3 className="font-heading font-bold text-neutral-900 text-lg mb-2 group-hover:text-green transition-colors">
-                    {p.title}
-                  </h3>
-                  <p className="text-sm text-neutral-400 leading-relaxed mb-6">
-                    {p.description}
-                  </p>
+                  <div className="p-7">
+                    <h3 className="font-heading font-bold text-neutral-900 text-lg mb-2 group-hover:text-green transition-colors">
+                      {p.title}
+                    </h3>
+                    <p className="text-sm text-neutral-400 leading-relaxed mb-5">
+                      {p.description}
+                    </p>
 
-                  <ul className="flex flex-col gap-2">
-                    {p.highlights.map((h) => (
-                      <li key={h} className="flex items-start gap-2 text-sm text-neutral-500">
-                        <svg className="w-4 h-4 text-green shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        {h}
-                      </li>
-                    ))}
-                  </ul>
+                    <ul className="flex flex-col gap-2">
+                      {p.highlights.map((h) => (
+                        <li key={h} className="flex items-start gap-2 text-sm text-neutral-500">
+                          <svg className="w-4 h-4 text-green shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          {h}
+                        </li>
+                      ))}
+                    </ul>
 
-                  <span className="inline-flex items-center gap-1.5 mt-6 text-xs font-medium text-neutral-400 group-hover:text-green transition-colors">
-                    Saiba mais
-                    <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </span>
+                    <span className="inline-flex items-center gap-1.5 mt-5 text-xs font-medium text-neutral-400 group-hover:text-green transition-colors">
+                      Saiba mais
+                      <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  </div>
                 </MagicCard>
               </a>
             </BlurFade>
