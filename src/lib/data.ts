@@ -40,7 +40,7 @@ export const pillars = [
     image: "/img/thumb-geracao.png",
     cover: "/img/sol-usinas.png",
     description: "EPC completo de usinas fotovoltaicas de solo. Projeto, construção e comissionamento.",
-    highlights: ["+20 MWp construídos", "Usinas de solo", "Projeto, construção e comissionamento"],
+    highlights: ["+30 MWp construídos", "Usinas solares", "Projeto, construção e comissionamento"],
   },
   {
     title: "Armazenamento",
@@ -112,7 +112,7 @@ export const sectors = [
 
 export const credentialStats = [
   { value: "20+", label: "Anos de engenharia elétrica" },
-  { value: "20+", label: "MWp em usinas de solo" },
+  { value: "30+", label: "MWp em usinas solares" },
   { value: "R$ 43M+", label: "Em projetos entregues" },
   { value: "600+", label: "Sistemas instalados" },
 ];
