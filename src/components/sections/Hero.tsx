@@ -37,10 +37,10 @@ export function Hero() {
           </h1>
 
           <p className="text-base md:text-lg text-neutral-500 max-w-lg leading-relaxed mb-10" style={fade(200)}>
-            20 anos projetando subestações e instalações industriais
-            para Bunge, Kepler Weber e AGCO. Mais de 30 MWp em usinas solares
-            entregues para a CRELUZ. Agora, baterias de lítio e automação
-            para quem depende de energia 24h.
+            20 anos de engenharia elétrica industrial. Mais de 30 MWp
+            em usinas solares construídas em diversas regiões do Brasil.
+            Agora, baterias de lítio e automação para quem depende de
+            energia 24h.
           </p>
 
           <div className="flex flex-wrap items-center gap-3" style={fade(300)}>
