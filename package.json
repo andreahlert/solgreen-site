@@ -9,6 +9,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
+    "start": "npx serve dist -s -l ${PORT:-3000}",
     "astro": "astro"
   },
   "dependencies": {
@@ -22,6 +23,7 @@
     "lucide-react": "^1.7.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
+    "serve": "^14.2.6",
     "tailwind-merge": "^3.5.0",
     "tailwindcss": "^4.2.2"
   }
