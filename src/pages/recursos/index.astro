@@ -1,0 +1,67 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith("/") ? rawBase : rawBase + "/";
+
+// Load all articles
+const articles = await Astro.glob("../../content/artigos/*.md");
+const sorted = articles.sort((a, b) => a.frontmatter.title.localeCompare(b.frontmatter.title));
+
+// Get unique categories
+const categories = [...new Set(sorted.map((a) => a.frontmatter.category))];
+---
+
+<Layout title="Recursos" description="Artigos, guias e ferramentas sobre energia solar, baterias de lítio e proteção energética para empresas.">
+  <PageHeader title="Recursos" />
+
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <!-- Simulador card -->
+      <a href={`${base}simulador`} class="group block mb-12 rounded-xl border border-neutral-200 hover:border-neutral-300 hover:shadow-sm transition-all p-6">
+        <div class="flex items-center gap-4">
+          <div class="w-12 h-12 rounded-xl bg-green/10 flex items-center justify-center shrink-0">
+            <svg class="w-6 h-6 text-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.58-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z" />
+            </svg>
+          </div>
+          <div>
+            <h2 class="font-heading font-bold text-neutral-900 text-lg group-hover:text-green transition-colors">Simulador de Risco Energético</h2>
+            <p class="text-sm text-neutral-400 mt-0.5">Calcule quanto um apagão custa para sua operação e descubra o payback da proteção energética.</p>
+          </div>
+          <svg class="w-5 h-5 text-neutral-300 group-hover:text-green group-hover:translate-x-1 transition-all ml-auto shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </div>
+      </a>
+
+      <!-- Articles -->
+      <p class="text-xs font-semibold text-green uppercase tracking-widest mb-6">Artigos</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {sorted.map((article) => {
+          const slug = article.file.split("/").pop()?.replace(".md", "");
+          return (
+            <a href={`${base}recursos/${slug}`} class="group rounded-xl border border-neutral-200 hover:border-neutral-300 hover:shadow-sm transition-all overflow-hidden">
+              {article.frontmatter.image && (
+                <div class="h-40 overflow-hidden">
+                  <img
+                    src={`${base}${article.frontmatter.image.slice(1)}`}
+                    alt={article.frontmatter.title}
+                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+              )}
+              <div class="p-5">
+                <p class="text-xs font-medium text-green mb-2">{article.frontmatter.category}</p>
+                <h3 class="font-heading font-bold text-neutral-900 group-hover:text-green transition-colors mb-2">{article.frontmatter.title}</h3>
+                <p class="text-sm text-neutral-400 leading-relaxed">{article.frontmatter.description}</p>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -15,18 +15,53 @@ const base = rawBase.endsWith("/") ? rawBase : rawBase + "/";
       <!-- Desktop -->
       <ul class="hidden md:flex items-center gap-1">
         {navLinks.map((link) => (
-          <li>
-            <a
-              href={`${base}${link.href.slice(1)}`}
-              class:list={[
-                "px-4 py-2 rounded-lg text-[13px] font-medium transition-all duration-200",
-                currentPath === link.href || (link.href !== "/" && currentPath.startsWith(link.href))
-                  ? "text-green bg-green/5"
-                  : "text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100",
-              ]}
-            >
-              {link.label}
-            </a>
+          <li class={link.children ? "relative group" : ""}>
+            {link.children ? (
+              <>
+                <button
+                  class:list={[
+                    "px-4 py-2 rounded-lg text-[13px] font-medium transition-all duration-200 inline-flex items-center gap-1",
+                    currentPath.startsWith(link.href) || currentPath.startsWith("/simulador") || currentPath.startsWith("/recursos")
+                      ? "text-green bg-green/5"
+                      : "text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100",
+                  ]}
+                >
+                  {link.label}
+                  <svg class="w-3.5 h-3.5 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                <div class="absolute top-full left-0 pt-1 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                  <div class="bg-white rounded-xl border border-neutral-200 shadow-lg py-2 min-w-[220px]">
+                    {link.children.map((child) => (
+                      <a
+                        href={`${base}${child.href.slice(1)}`}
+                        class:list={[
+                          "block px-4 py-2.5 text-[13px] font-medium transition-colors",
+                          currentPath === child.href || currentPath.startsWith(child.href)
+                            ? "text-green bg-green/5"
+                            : "text-neutral-500 hover:text-neutral-900 hover:bg-neutral-50",
+                        ]}
+                      >
+                        {child.label}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </>
+            ) : (
+              <a
+                href={`${base}${link.href.slice(1)}`}
+                class:list={[
+                  "px-4 py-2 rounded-lg text-[13px] font-medium transition-all duration-200",
+                  currentPath === link.href || (link.href !== "/" && currentPath.startsWith(link.href))
+                    ? "text-green bg-green/5"
+                    : "text-neutral-500 hover:text-neutral-900 hover:bg-neutral-100",
+                ]}
+              >
+                {link.label}
+              </a>
+            )}
           </li>
         ))}
       </ul>
@@ -53,17 +88,36 @@ const base = rawBase.endsWith("/") ? rawBase : rawBase + "/";
     <div class="md:hidden hidden border-t border-neutral-100" id="mobile-menu">
       <div class="max-w-6xl mx-auto px-6 py-3 flex flex-col gap-1">
         {navLinks.map((link) => (
-          <a
-            href={`${base}${link.href.slice(1)}`}
-            class:list={[
-              "px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
-              currentPath === link.href || (link.href !== "/" && currentPath.startsWith(link.href))
-                ? "text-green bg-green/5"
-                : "text-neutral-600 hover:bg-neutral-50",
-            ]}
-          >
-            {link.label}
-          </a>
+          link.children ? (
+            <>
+              <p class="px-3 py-2 text-xs font-semibold text-neutral-400 uppercase tracking-widest mt-2">{link.label}</p>
+              {link.children.map((child) => (
+                <a
+                  href={`${base}${child.href.slice(1)}`}
+                  class:list={[
+                    "px-3 py-2.5 rounded-lg text-sm font-medium transition-colors pl-6",
+                    currentPath === child.href || currentPath.startsWith(child.href)
+                      ? "text-green bg-green/5"
+                      : "text-neutral-600 hover:bg-neutral-50",
+                  ]}
+                >
+                  {child.label}
+                </a>
+              ))}
+            </>
+          ) : (
+            <a
+              href={`${base}${link.href.slice(1)}`}
+              class:list={[
+                "px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
+                currentPath === link.href || (link.href !== "/" && currentPath.startsWith(link.href))
+                  ? "text-green bg-green/5"
+                  : "text-neutral-600 hover:bg-neutral-50",
+              ]}
+            >
+              {link.label}
+            </a>
+          )
         ))}
       </div>
     </div>

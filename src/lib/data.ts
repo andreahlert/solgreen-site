@@ -20,7 +20,10 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Soluções", href: "/solucoes" },
   { label: "Setores", href: "/setores" },
-  { label: "Simulador", href: "/simulador" },
+  { label: "Recursos", href: "/recursos", children: [
+    { label: "Simulador de Risco Energético", href: "/simulador" },
+    { label: "Artigos", href: "/recursos" },
+  ]},
   { label: "Quem Somos", href: "/quem-somos" },
   { label: "Contato", href: "/contato" },
 ];
@@ -102,7 +105,7 @@ export const sectors = [
   {
     title: "Comércio e Varejo",
     slug: "comercio",
-    cover: "/img/sol-usinas.png",
+    cover: "/img/setor-comercio.jpg",
     icon: "M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36c-.301 0-.454-.355-.255-.542a23.46 23.46 0 0011.45-9.123c.1-.162.352-.162.452 0a23.46 23.46 0 0011.45 9.123c.199.187.046.542-.255.542H13.5",
     pain: "Conta de luz alta e sem proteção contra apagão.",
     description: "Energia solar fotovoltaica para reduzir a tarifa e baterias de lítio para proteger equipamentos e estoque perecível contra quedas de energia.",
