@@ -42,38 +42,28 @@ Uma unidade de armazenagem de médio porte consome quantidades expressivas de en
 
 A sazonalidade é um fator importante. Durante a safra, o consumo pode ser 3 a 5 vezes maior que nos meses de entressafra. Isso impacta tanto a conta de energia quanto a demanda contratada.
 
-## Energia solar em telhados de armazéns
+## Energia solar em unidades de armazenagem
 
-Os telhados de armazéns e silos cobertos são grandes, contínuos e geralmente têm orientação favorável. São candidatos ideais para painéis solares.
+Unidades de armazenagem geralmente têm área disponível em solo, o que favorece a instalação de usinas fotovoltaicas ground-mounted. Essa configuração facilita a limpeza e manutenção dos painéis, especialmente em ambientes com alta concentração de poeira, como é comum próximo a silos e secadores.
 
-A geração solar cobre parte do consumo de base (aeração, controle, iluminação) e, durante o período de safra, contribui para reduzir o pico de consumo diurno dos secadores. O excedente gera créditos na distribuidora ou carrega baterias de backup.
+A geração durante o dia coincide com parte do consumo operacional e reduz a energia comprada da distribuidora. Combinada com bateria, abre uma segunda frente de economia via time-shifting: a bateria armazena o excedente solar durante o dia e o usa nos momentos de maior demanda ou no horário de ponta, quando a tarifa é mais alta.
 
 O payback de sistemas solares em unidades de armazenagem varia entre 3 e 5 anos, dependendo da tarifa local e do perfil de consumo. Considerando que a operação tem vida útil de décadas, o retorno é significativo ao longo do tempo.
 
 ## Bateria como proteção durante a safra
 
-O gerador diesel é comum em unidades de armazenagem, mas o cenário é semelhante ao de outros setores: o tempo de partida de 10 a 30 segundos pode ser crítico.
+O gerador diesel é comum em unidades de armazenagem e resolve bem os apagões prolongados. A bateria de lítio entra como primeira camada, cobrindo os eventos mais curtos, que são a maioria, sem acionar o diesel.
 
-Para secadores de fluxo contínuo, uma interrupção de 30 segundos pode significar a necessidade de reiniciar o processo com lote parcialmente seco, gerando retrabalho e risco de qualidade. Para sistemas de automação e controle, a perda de energia pode resetar parâmetros e exigir recalibração.
-
-A bateria LFP assume instantaneamente, mantendo os sistemas de controle e os ventiladores de aeração em operação. Para secadores de alta potência, a bateria pode cobrir o gap até o gerador diesel estabilizar, eliminando o risco da transição.
-
-## Gestão de demanda na safra
-
-O perfil de consumo sazonal das unidades de armazenagem cria um problema específico com a demanda contratada. Durante a safra, o pico de consumo é muito alto. Na entressafra, a demanda cai drasticamente.
-
-Se a demanda contratada é dimensionada para o pico da safra, a empresa paga por capacidade ociosa durante 8-9 meses do ano. Se dimensionada para a média, paga multas de ultrapassagem durante os meses de safra.
-
-Baterias com função de peak shaving resolvem esse dilema: a empresa contrata a demanda para o consumo médio, e a bateria absorve os picos durante a safra. A economia em demanda contratada ajuda a pagar o investimento na bateria.
+Para apagões prolongados durante a safra, os dois trabalham em conjunto: a bateria mantém os sistemas em operação enquanto o gerador estabiliza, e o gerador sustenta a operação pelo tempo necessário. O resultado é menos acionamentos de diesel, menos consumo de combustível e menos ciclos de manutenção ao longo do ano.
 
 ## A configuração para unidades de armazenagem
 
 A solução mais completa para uma unidade de armazenagem combina:
 
-**Solar nos telhados** para redução permanente da conta de energia. A geração durante o dia cobre parte do consumo de aeração e, na safra, contribui para reduzir o impacto dos secadores na conta.
+**Solar fotovoltaico em solo** para redução permanente da conta de energia. A geração durante o dia cobre parte do consumo de aeração e, na safra, contribui para reduzir o impacto dos secadores na conta.
 
-**Bateria LFP** para três funções: backup instantâneo de sistemas críticos (aeração, controle, automação), peak shaving de demanda contratada, e armazenamento de excedente solar.
+**Bateria de lítio** para quatro funções: backup de sistemas críticos (aeração, controle, automação), peak shaving de demanda contratada, time-shifting do excedente solar para o horário de ponta, e redução dos acionamentos do gerador diesel.
 
-**Gerador diesel** como backup de longa duração para eventos prolongados durante a safra, com a bateria eliminando o gap de transição.
+**Gerador diesel** como backup de longa duração para eventos prolongados durante a safra. A bateria cobre os eventos curtos, reduzindo o número de acionamentos do gerador ao longo do ano.
 
 O dimensionamento correto depende do perfil específico de cada unidade: capacidade de armazenagem, tipo de secador, número de silos com aeração, e perfil de consumo ao longo do ano.

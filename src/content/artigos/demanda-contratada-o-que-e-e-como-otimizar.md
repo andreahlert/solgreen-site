@@ -24,18 +24,6 @@ Acima dos 5%, a tarifa aplicada sobre o excedente é **o dobro** da tarifa norma
 
 Na prática, um único pico de demanda em um único dia do mês pode gerar uma multa que equivale a semanas de consumo normal. E esses picos costumam acontecer nos piores momentos: partida de motores, religamento após apagão, horários de ponta.
 
-## O que causa picos de demanda
-
-Os vilões mais comuns são:
-
-**Partida de motores elétricos**: um motor de compressor ou ventilação puxa de 3 a 5 vezes a corrente nominal na partida. Se vários motores ligam ao mesmo tempo (como após um retorno de energia), o pico pode ultrapassar facilmente a demanda contratada.
-
-**Horário de ponta**: entre 18h e 21h, a tarifa de demanda é mais alta. Se a operação concentra consumo nesse horário, o impacto na conta é multiplicado.
-
-**Sazonalidade**: operações agrícolas como secadores de grãos e granjas de frangos têm consumo concentrado em determinadas épocas. A demanda contratada precisa cobrir o pico, mas fica ociosa no restante do ano.
-
-**Equipamentos mal dimensionados**: compressores, bombas e sistemas de climatização antigos ou superdimensionados puxam mais potência do que o necessário.
-
 ## Como otimizar a demanda contratada
 
 A otimização passa por três frentes:
