@@ -190,9 +190,15 @@ export const cases = [
     client: "L8",
     location: "São Francisco do Guaporé / RO",
     modality: "Geração Distribuída",
-    power: "6,318 MWp",
-    cover: "/img/sol-usinas.jpg",
-    photos: [],
+    power: "2,052 MWp",
+    cover: "/img/obras/sao-francisco-do-guapore-1.jpg",
+    photos: [
+      "/img/obras/sao-francisco-do-guapore-1.jpg",
+      "/img/obras/sao-francisco-do-guapore-2.jpg",
+      "/img/obras/sao-francisco-do-guapore-3.jpg",
+      "/img/obras/sao-francisco-do-guapore-4.jpg",
+      "/img/obras/sao-francisco-do-guapore-5.jpg",
+    ],
     specs: [
       "5.400 módulos de 380 Wp (Canadian)",
       "10 inversores de 250 kW (Sungrow)",
