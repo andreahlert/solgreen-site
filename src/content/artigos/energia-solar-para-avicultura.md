@@ -3,7 +3,7 @@ title: "Energia solar na avicultura: como reduzir custos e proteger sua granja"
 description: "A ventilação consome mais da metade da energia de uma granja. Veja como solar e baterias podem reduzir a conta de luz e evitar perdas de lotes inteiros por falta de energia."
 category: "Energia Solar"
 tags: ["avicultura", "solar", "granja", "energia", "bateria"]
-image: "/img/setor-avicultura.png"
+image: "/img/setor-avicultura.jpg"
 ---
 
 Em 2024, uma queda de energia em São Miguel do Iguaçu, no Paraná, matou 20 mil frangos de corte. Em Santa Helena, no mesmo estado, foram 40 mil aves quando a energia caiu e o gerador de backup falhou na sequência. Em Orleans, Santa Catarina, mais 10 mil. Esses casos foram noticiados. Muitos outros nunca chegam à imprensa.

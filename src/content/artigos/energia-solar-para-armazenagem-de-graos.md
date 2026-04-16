@@ -3,7 +3,7 @@ title: "Energia solar e backup para armazenagem de grãos"
 description: "O Brasil perde 34 milhões de toneladas de grãos por ano por falhas na armazenagem. Secadores e aeração dependem de energia constante. Veja como solar e baterias protegem a safra."
 category: "Energia Solar"
 tags: ["armazenagem", "grãos", "solar", "secador", "aeração", "agro"]
-image: "/img/setor-armazenagem.png"
+image: "/img/setor-armazenagem.jpg"
 ---
 
 O Brasil produz mais de 350 milhões de toneladas de grãos por safra, mas tem capacidade estática para armazenar apenas 218 milhões de toneladas. Esse déficit de mais de 200 milhões de toneladas pressiona toda a cadeia logística e torna cada unidade de armazenagem existente ainda mais crítica.

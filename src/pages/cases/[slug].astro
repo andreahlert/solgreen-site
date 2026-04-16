@@ -31,7 +31,7 @@ const otherCases = cases.filter((c) => c.slug !== caseData.slug);
     </div>
     <div class="max-w-6xl mx-auto px-6">
       <div class="rounded-2xl overflow-hidden">
-        <img src={`${base}${caseData.cover.slice(1)}`} alt={caseData.title} class="w-full h-56 md:h-96 object-cover" />
+        <img src={`${base}${caseData.cover.slice(1)}`} alt={caseData.title} loading="lazy" decoding="async" class="w-full h-56 md:h-96 object-cover" />
       </div>
     </div>
   </section>
@@ -74,7 +74,7 @@ const otherCases = cases.filter((c) => c.slug !== caseData.slug);
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {caseData.photos.map((photo: string, i: number) => (
                   <div class="rounded-xl overflow-hidden">
-                    <img src={`${base}${photo.slice(1)}`} alt={`${caseData.title} - Foto ${i + 1}`} class="w-full h-48 md:h-64 object-cover" />
+                    <img src={`${base}${photo.slice(1)}`} alt={`${caseData.title} - Foto ${i + 1}`} loading="lazy" decoding="async" class="w-full h-48 md:h-64 object-cover" />
                   </div>
                 ))}
               </div>
@@ -139,7 +139,7 @@ const otherCases = cases.filter((c) => c.slug !== caseData.slug);
             {otherCases.slice(0, 3).map((c) => (
               <a href={`${base}cases/${c.slug}`} class="group rounded-xl border border-neutral-200 hover:border-neutral-300 hover:shadow-sm transition-all overflow-hidden">
                 <div class="h-32 overflow-hidden">
-                  <img src={`${base}${c.cover.slice(1)}`} alt={c.title} class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={`${base}${c.cover.slice(1)}`} alt={c.title} loading="lazy" decoding="async" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div class="p-4">
                   <span class="text-xs text-green font-medium">{c.power}</span>

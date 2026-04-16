@@ -28,7 +28,7 @@ export function SolutionsGrid() {
                   className="flex items-center justify-center h-10 px-4 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                 >
                   <img
-                    src={url(client.logo)}
+                    src={url(client.logo)} loading="lazy" decoding="async"
                     alt={client.name}
                     className="max-h-10 max-w-[140px] object-contain"
                   />

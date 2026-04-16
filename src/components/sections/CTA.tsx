@@ -11,7 +11,7 @@ export function CTA() {
             <BorderBeam size={300} duration={15} colorFrom="#22c55e" colorTo="#1933c5" />
             <div className="relative min-h-[380px] md:min-h-[340px]">
               <img
-                src={url("/img/cta-bg.png")}
+                src={url("/img/cta-bg.jpg")} loading="lazy" decoding="async"
                 alt="Instalação de usina solar"
                 className="absolute inset-0 w-full h-full object-cover"
               />

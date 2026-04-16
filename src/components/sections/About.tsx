@@ -28,7 +28,7 @@ export function About() {
                 <MagicCard className="overflow-hidden h-full group hover:border-green/30 transition-colors duration-300">
                   <div className="h-44 overflow-hidden">
                     <img
-                      src={url(p.image)}
+                      src={url(p.image)} loading="lazy" decoding="async"
                       alt={p.title}
                       className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
                     />

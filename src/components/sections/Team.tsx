@@ -23,7 +23,7 @@ export function Team() {
               <div className="group text-center">
                 <div className="aspect-[3/4] rounded-xl overflow-hidden bg-neutral-200 mb-4">
                   <img
-                    src={url(member.photo)}
+                    src={url(member.photo)} loading="lazy" decoding="async"
                     alt={member.name}
                     className="w-full h-full object-cover object-top group-hover:scale-[1.03] transition-transform duration-500"
                   />

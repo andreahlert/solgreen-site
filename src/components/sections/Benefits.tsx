@@ -29,7 +29,7 @@ export function Benefits() {
               >
                 <div className="h-36 overflow-hidden">
                   <img
-                    src={url(s.cover)}
+                    src={url(s.cover)} loading="lazy" decoding="async"
                     alt={s.title}
                     className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500"
                   />

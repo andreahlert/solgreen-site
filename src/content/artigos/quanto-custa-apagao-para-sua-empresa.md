@@ -3,7 +3,7 @@ title: "Quanto custa um apagão para sua empresa?"
 description: "No Brasil, cada consumidor fica em média 10 horas por ano sem energia. Para operações críticas, cada minuto sem luz pode representar milhares de reais em prejuízo. Entenda os números reais."
 category: "Backup de Energia"
 tags: ["apagão", "backup", "bateria", "energia", "prejuízo"]
-image: "/img/setor-camaras-frias.png"
+image: "/img/setor-camaras-frias.jpg"
 ---
 
 Em dezembro de 2025, um único apagão em São Paulo gerou R$ 1,54 bilhão em prejuízos para o comércio da cidade, segundo levantamento da FecomercioSP. O setor de serviços concentrou mais de R$ 1,4 bilhão dessas perdas. Isso em uma cidade com infraestrutura elétrica relativamente consolidada.

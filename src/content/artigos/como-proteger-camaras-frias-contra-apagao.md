@@ -3,7 +3,7 @@ title: "Como proteger câmaras frias contra apagões"
 description: "A ANVISA exige alimentos abaixo de 5°C. Quando a câmara para, o relógio começa a contar. Veja como baterias de lítio e solar protegem seu estoque e evitam descarte obrigatório."
 category: "Backup de Energia"
 tags: ["câmara fria", "ANVISA", "backup", "bateria", "alimentos"]
-image: "/img/setor-camaras-frias.png"
+image: "/img/setor-camaras-frias.jpg"
 ---
 
 Uma câmara fria que perde energia não é apenas um inconveniente operacional. É uma bomba-relógio regulatória. A ANVISA, através da RDC nº 216/2004 e normas complementares, exige que alimentos refrigerados sejam mantidos entre 0°C e 5°C, e congelados a -18°C ou menos. Quando a câmara para e a temperatura sobe acima desses limites, o lote pode precisar ser descartado por exigência sanitária.

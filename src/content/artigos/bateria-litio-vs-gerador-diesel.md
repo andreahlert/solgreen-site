@@ -3,7 +3,7 @@ title: "Bateria de lítio vs gerador diesel: qual protege melhor sua operação?
 description: "Comparativo técnico entre baterias de lítio e geradores diesel para backup de energia industrial. Tempo de resposta, custo de operação, manutenção e quando combinar os dois."
 category: "Backup de Energia"
 tags: ["bateria", "gerador", "diesel", "backup"]
-image: "/img/thumb-armazenamento.png"
+image: "/img/thumb-armazenamento.jpg"
 ---
 
 Por décadas, o gerador diesel foi a única opção viável para backup de energia em operações industriais e rurais. Ele continua sendo útil em muitos cenários, mas as baterias de lítio trouxeram uma alternativa que complementa ou substitui o diesel dependendo do perfil da operação.

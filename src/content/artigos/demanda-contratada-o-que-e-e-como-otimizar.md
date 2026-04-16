@@ -3,7 +3,7 @@ title: "Demanda contratada: o que é e como evitar multas na conta de luz"
 description: "Sua empresa paga pela energia que usa e pela potência que reserva. Se ultrapassar o contratado, a multa é o dobro da tarifa. Entenda como funciona e como otimizar."
 category: "Gestão de Energia"
 tags: ["demanda contratada", "conta de luz", "multa", "ANEEL", "gestão"]
-image: "/img/thumb-automacao.png"
+image: "/img/thumb-automacao.jpg"
 ---
 
 A conta de energia de uma empresa tem dois componentes principais: o consumo (kWh) e a demanda (kW). A maioria dos gestores foca no consumo, que é a quantidade de energia usada ao longo do mês. Mas a demanda contratada pode representar uma parcela significativa da conta, e quando mal dimensionada, gera multas pesadas.

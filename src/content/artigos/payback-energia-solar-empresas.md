@@ -3,7 +3,7 @@ title: "Payback de energia solar para empresas: quanto tempo para recuperar o in
 description: "O retorno do investimento em solar para empresas varia de 3 a 5 anos, com vida útil de 25+. Entenda o que influencia o prazo e como calcular para o seu caso."
 category: "Energia Solar"
 tags: ["payback", "investimento", "solar", "retorno", "ROI"]
-image: "/img/sol-usinas.png"
+image: "/img/sol-usinas.jpg"
 ---
 
 A pergunta mais frequente de qualquer empresário considerando energia solar é direta: em quanto tempo o investimento se paga? A resposta depende de algumas variáveis, mas os números atuais do mercado brasileiro são favoráveis.
