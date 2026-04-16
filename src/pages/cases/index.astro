@@ -1,0 +1,63 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import { cases } from "../../lib/data";
+
+const rawBase = import.meta.env.BASE_URL;
+const base = rawBase.endsWith("/") ? rawBase : rawBase + "/";
+
+const totalMWp = cases.reduce((sum, c) => {
+  const num = parseFloat(c.power.replace(",", "."));
+  return sum + num;
+}, 0);
+---
+
+<Layout title="Cases" description="Conheça as usinas solares projetadas e construídas pela SolGreen Energia em diversas regiões do Brasil.">
+  <PageHeader title="Cases" />
+
+  <section class="py-16">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+        <div class="text-center">
+          <p class="text-2xl md:text-3xl font-heading font-bold text-neutral-900">{cases.length}</p>
+          <p class="text-xs text-neutral-400 mt-1">Usinas construídas</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl md:text-3xl font-heading font-bold text-neutral-900">{totalMWp.toFixed(1).replace(".", ",")} MWp</p>
+          <p class="text-xs text-neutral-400 mt-1">Potência total instalada</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl md:text-3xl font-heading font-bold text-neutral-900">3</p>
+          <p class="text-xs text-neutral-400 mt-1">Estados</p>
+        </div>
+        <div class="text-center">
+          <p class="text-2xl md:text-3xl font-heading font-bold text-neutral-900">26.184</p>
+          <p class="text-xs text-neutral-400 mt-1">Módulos instalados</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {cases.map((c) => (
+          <a href={`${base}cases/${c.slug}`} class="group rounded-xl border border-neutral-200 hover:border-neutral-300 hover:shadow-sm transition-all overflow-hidden">
+            <div class="h-52 overflow-hidden">
+              <img
+                src={`${base}${c.cover.slice(1)}`}
+                alt={c.title}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-2.5 py-1 rounded-full bg-green/10 text-green text-xs font-medium">{c.power}</span>
+                <span class="px-2.5 py-1 rounded-full bg-neutral-100 text-neutral-500 text-xs font-medium">{c.modality}</span>
+              </div>
+              <h2 class="font-heading font-bold text-neutral-900 text-xl group-hover:text-green transition-colors mb-2">{c.title}</h2>
+              <p class="text-sm text-neutral-400">{c.location}</p>
+              <p class="text-sm text-neutral-500 mt-3 leading-relaxed">{c.challenge}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>

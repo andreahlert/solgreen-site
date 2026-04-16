@@ -20,6 +20,7 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Soluções", href: "/solucoes" },
   { label: "Setores", href: "/setores" },
+  { label: "Cases", href: "/cases" },
   { label: "Recursos", href: "/recursos", children: [
     { label: "Simulador de Risco Energético", href: "/simulador" },
     { label: "Artigos", href: "/recursos" },
@@ -110,6 +111,74 @@ export const sectors = [
     pain: "Conta de luz alta e sem proteção contra apagão.",
     description: "Energia solar fotovoltaica para reduzir a tarifa e baterias de lítio para proteger equipamentos e estoque perecível contra quedas de energia.",
     solutions: ["Solar fotovoltaico para redução de tarifa", "Backup de bateria para equipamentos críticos", "Proteção contra apagões e quedas de energia", "Redução de custos operacionais com energia"],
+  },
+];
+
+export const cases = [
+  {
+    title: "Cerro do Sol",
+    slug: "cerro-do-sol",
+    client: "CRELUZ",
+    location: "Cerro Grande / RS",
+    modality: "Mercado Livre",
+    power: "3,3 MWp",
+    cover: "/img/obras/cerro-do-sol-1.jpg",
+    photos: ["/img/obras/cerro-do-sol-1.jpg", "/img/obras/cerro-do-sol-2.jpg"],
+    specs: [
+      "5.632 módulos de 585 Wp (Risen)",
+      "30 inversores de 100 kW (Huawei)",
+      "2 transformadores WEG de 1.750 kVA",
+    ],
+    challenge: "Primeira usina 100% SolGreen, desde o orçamento até a entrega. Primeiro projeto construído para a CRELUZ.",
+  },
+  {
+    title: "Sol da Cidade",
+    slug: "sol-da-cidade",
+    client: "CRELUZ",
+    location: "Frederico Westphalen / RS",
+    modality: "Mercado Livre",
+    power: "2,76 MWp",
+    cover: "/img/obras/sol-da-cidade-1.jpg",
+    photos: ["/img/obras/sol-da-cidade-1.jpg", "/img/obras/sol-da-cidade-2.jpg"],
+    specs: [
+      "4.352 módulos de 635 Wp (Astronergy)",
+      "9 inversores de 250 kW (Huawei)",
+      "1 transformador WEG de 2.500 kVA",
+    ],
+    challenge: "Terreno com grande volume de rocha, exigindo perfuração extensiva. Execução mais demorada e complexa que o convencional.",
+  },
+  {
+    title: "Coxilha das Grápias",
+    slug: "coxilha-das-grapias",
+    client: "Coxilha das Grápias SPE",
+    location: "Erval Seco / RS",
+    modality: "Geração Distribuída",
+    power: "6,318 MWp",
+    cover: "/img/obras/coxilha-das-grapias-1.jpg",
+    photos: ["/img/obras/coxilha-das-grapias-1.jpg", "/img/obras/coxilha-das-grapias-2.jpg"],
+    specs: [
+      "10.800 módulos de 575 Wp (Sunova)",
+      "18 inversores de 250 kW (Sungrow)",
+      "6 transformadores ITR de 1.000 kVA",
+    ],
+    challenge: "Usina executada em 4 meses, prazo extremamente curto para aproveitar regra regulatória anterior mais vantajosa.",
+  },
+  {
+    title: "São Francisco do Guaporé",
+    slug: "sao-francisco-do-guapore",
+    client: "L8",
+    location: "São Francisco do Guaporé / RO",
+    modality: "Geração Distribuída",
+    power: "6,318 MWp",
+    cover: "/img/sol-usinas.png",
+    photos: [],
+    specs: [
+      "5.400 módulos de 380 Wp (Canadian)",
+      "10 inversores de 250 kW (Sungrow)",
+      "1 transformador ABB de 2.000 kVA",
+      "Tracker (seguidor solar) STI Norland",
+    ],
+    challenge: "Usina com tracker em local remoto, próximo à fronteira com a Bolívia. Logística complexa e execução durante a pandemia.",
   },
 ];
 
