@@ -33,7 +33,7 @@ export const team = [
   { name: "Augusto Amaral", role: "Sócio-Fundador", photo: "/img/Augusto.jpg" },
   { name: "Frantiesco", role: "Sócio-Fundador", photo: "/img/Frantiesco.jpg" },
   { name: "Ricardo", role: "Sócio-Fundador", photo: "/img/Ricardo.jpg" },
-  { name: "Aurélio", role: "Sócio-Fundador", photo: "/img/Aurélio I.jpg" },
+  { name: "Aurélio", role: "Sócio-Fundador", photo: "/img/Aurelio.png" },
 ];
 
 export const pillars = [
