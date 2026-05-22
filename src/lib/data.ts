@@ -235,6 +235,9 @@ export const credentialClients = [
   { name: "Alibem", logo: "/img/clients/alibem.svg" },
   { name: "Sulnorte", logo: "/img/clients/sulnorte.png" },
   { name: "Estaleiro Rio Maguari", logo: "/img/clients/riomaguari.png" },
+  { name: "Bruning", logo: "/img/clients/bruning.png" },
+  { name: "Copercampos", logo: "/img/clients/copercampos.png" },
+  { name: "Yara", logo: "/img/clients/yara.svg" },
 ];
 
 export const solutions = pillars;
